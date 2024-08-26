@@ -13,4 +13,12 @@ public class Vertex {
   public String getLabel() {
     return this.label;
   }
+
+  public void addDegree() {
+    degree++;
+  }
+
+  public int getDegree() {
+    return degree;
+  }
 }
