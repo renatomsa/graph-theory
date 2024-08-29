@@ -50,22 +50,25 @@ public class Graph {
     this.existsOrThrow(vertex);
     int vertexIdx = this.labelsToIndex.get(vertex);
     return this.AdjacencyMatrix.getAdjacencies(vertexIdx);
-    }
-    private boolean existsOrThrow(String vertex) {
+  }
+
+  private boolean existsOrThrow(String vertex) {
     if(!existVertex(vertex)) {
     throw new IllegalArgumentException("Vertex does not exist");
     }
     return true;
-    }
-    private boolean existVertex(String vertexLabel) {
+  }
+
+  private boolean existVertex(String vertexLabel) {
     int idx = this.labelsToIndex.get(vertexLabel);
     return this.vertices.get(idx) != null ? true : false;
-    }
-    private void createAdjacencyMatrix() {
+  }
+
+  private void createAdjacencyMatrix() {
 
     if(this.AdjacencyMatrix == null){
     this.AdjacencyMatrix = new AdjacencyMatrix(new
     ArrayList<Vertex>(this.vertices));
     }
-    }
+  }
 }
