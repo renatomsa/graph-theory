@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Vertex {
   private int degree;
   private String label;

@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Graph {
   private int maxVerticesQty;
   private boolean isMaxVerticesQtyDef;

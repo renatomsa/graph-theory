@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class AdjacencyMatrix {
   private int[][] matrix;
   private List<Vertex> vertices;
