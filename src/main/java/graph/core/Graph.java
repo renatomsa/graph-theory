@@ -13,7 +13,7 @@ public class Graph {
 
   public Graph(int verticesQty) {
     if (verticesQty <= 0) {
-      throw new IllegalArgumentException("Max ammount of vertices must be greater or equal to 1")
+      throw new IllegalArgumentException("Number of vertices must be greater or equal to 1")
     }
 
     maxVerticesQty = verticesQty;
