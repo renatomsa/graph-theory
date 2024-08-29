@@ -21,4 +21,26 @@ public class SpanningTreeBFS {
 
     return spanningTree;
   }
+
+  private void bfs(String startVertexLabel) throws Exception {
+    Queue<String> queue = new LinkedList<>();
+    queue.offer(startVertexLabel);
+    visited.add(startVertexLabel);
+    spanningTree.AddVertex(startVertexLabel);
+
+    while (!queue.isEmpty()) {
+        String currentVertexLabel = queue.poll();
+        List<Vertex> adjacencies = originalGraph.getAdjacenciess(currentVertexLabel);
+
+        for (Vertex adjacentVertex : adjacencies) {
+            String adjacentLabel = adjacentVertex.getLabel();
+            if (!visited.contains(adjacentLabel)) {
+                visited.add(adjacentLabel);
+                queue.offer(adjacentLabel);
+                spanningTree.AddVertex(adjacentLabel);
+                spanningTree.connectVertices(currentVertexLabel, adjacentLabel);
+            }
+        }
+    }
+  }
 }
